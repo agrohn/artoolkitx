@@ -50,6 +50,17 @@
 #include <opencv2/highgui.hpp>
 #include <iostream>
 
+#ifndef _WIN32
+namespace std {
+	inline std::string to_string(int i)
+	{
+		std::stringstream s;
+		s << i;
+		return s.str();
+	}
+}
+#endif
+
 class PlanarTracker::PlanarTrackerImpl
 {
 private:
