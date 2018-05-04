@@ -33,6 +33,8 @@ project(artoolkitX
         VERSION ${ARX_VERSION_STRING}
         LANGUAGES CXX C
 )
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 11)
 
 if(CMAKE_CONFIGURATION_TYPES)
   message(STATUS "Using multi-configuration CMake generator.")
